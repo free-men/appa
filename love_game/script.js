@@ -821,7 +821,7 @@ function showFinalEnding(choice) {
         Однак дзеркало часу розбилося. Золотий кулон залишився у вас як єдиний доказ того, що це не було сном. 
         У сучасності маєток визнали історичною пам'яткою архітектури, а Річарда відсторонили від спадщини. 
         Анна продовжила свою роботу реставратора, але щоразу, відкриваючи стару книгу, вона сподівається побачити сині чорнила, які більше ніколи не з'явилися...`;
-        coverEl.style.backgroundImage = "url('../../../../.gemini/antigravity-ide/brain/dea9a842-87b9-4df7-bb40-2aeafece7ec5/anna_library_1782328818809.png')";
+        coverEl.style.backgroundImage = "url('images/anna_library_1782328818809.png')";
         
         // Play melancholy tune
         setTimeout(() => playMelancholyTune(), 500);
@@ -832,7 +832,7 @@ function showFinalEnding(choice) {
         Вона бачить перед собою переляканого, але щасливого Макса. Варта якраз вибиває двері кабінету, але тепер вони разом. 
         Використовуючи сучасні знання Анни про таємні ходи маєтку, вони втікають через таємний вихід підвалу в нічну темряву 1888 року.
         На її шиї сяє той самий золотий кулон, який Макс знайшов у ніші. Вона залишилася в минулому заради кохання, назавжди змінивши хід історії роду.`;
-        coverEl.style.backgroundImage = "url('../../../../.gemini/antigravity-ide/brain/dea9a842-87b9-4df7-bb40-2aeafece7ec5/max_study_1782328830355.png')";
+        coverEl.style.backgroundImage = "url('images/max_study_1782328830355.png')";
         
         // Play triumphant/romantic tune
         setTimeout(() => playTriumphantTune(), 500);

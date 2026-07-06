@@ -175,7 +175,7 @@ body.demo-active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../../../.gemini/antigravity-ide/brain/dea9a842-87b9-4df7-bb40-2aeafece7ec5/echoes_cover_1782328809395.png');
+    background-image: url('images/echoes_cover_1782328809395.png');
     background-size: cover;
     background-position: center;
     transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 1s ease;
@@ -352,12 +352,12 @@ body.demo-active {
 }
 
 .era-present {
-    background-image: url('../../../../.gemini/antigravity-ide/brain/dea9a842-87b9-4df7-bb40-2aeafece7ec5/anna_library_1782328818809.png');
+    background-image: url('images/anna_library_1782328818809.png');
     border-right: 1px solid rgba(99, 179, 237, 0.3);
 }
 
 .era-past {
-    background-image: url('../../../../.gemini/antigravity-ide/brain/dea9a842-87b9-4df7-bb40-2aeafece7ec5/max_study_1782328830355.png');
+    background-image: url('images/max_study_1782328830355.png');
 }
 
 .era-overlay {
