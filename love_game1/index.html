@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Легенди Серця: Крейдяні Підземелля</title>
+    <meta name="description" content="Неймовірна інтерактивна новела про кохання та таємниці крейдяних тунелів міста Хелм. Зустріньте привида Білуха та перевірте свої почуття.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Game Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="gothic-title pulse">Легенди Серця</h1>
+            <div class="spinner"></div>
+            <p class="preloader-text">Завантаження таємниць підземелля...</p>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <main id="game-container" class="game-container">
+        
+        <!-- Game Viewport Background Image -->
+        <div id="bg-viewport" class="bg-viewport"></div>
+        <div id="ambient-overlay" class="ambient-overlay"></div>
+
+        <!-- Ambient Sound Visualizer (Subtle animation showing sound state) -->
+        <div id="audio-indicator" class="audio-indicator" title="Звуковий супровід активний">
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Quick Controls (Top Bar) -->
+        <header id="top-controls" class="top-controls">
+            <button id="btn-quick-save" class="control-btn hidden" title="Швидке збереження">QSAVE</button>
+            <button id="btn-quick-load" class="control-btn hidden" title="Швидке завантаження">QLOAD</button>
+            <button id="btn-menu-save" class="control-btn hidden" title="Зберегти / Завантажити">СЛОТИ</button>
+            <button id="btn-menu-settings" class="control-btn" title="Налаштування">⚙️</button>
+            <button id="btn-toggle-sound" class="control-btn sound-on" title="Вимкнути звук">🔉⤓</button>
+        </header>
+
+        <!-- Screen 1: Main Menu -->
+        <section id="main-menu" class="menu-screen active">
+            <div class="menu-content glass-card">
+                <h1 class="game-main-title">Легенди Серця</h1>
+                <h2 class="game-sub-title">Крейдяні Підземелля</h2>
+                
+                <div class="menu-buttons">
+                    <button id="btn-continue-game" class="menu-btn primary-btn hidden">Продовжити</button>
+                    <button id="btn-start-game" class="menu-btn primary-btn">Почати Пригоду</button>
+                    <button id="btn-load-menu" class="menu-btn secondary-btn">Завантажити Гру</button>
+                    <button id="btn-open-gallery" class="menu-btn secondary-btn">Галерея</button>
+                    <button id="btn-open-settings" class="menu-btn secondary-btn">Налаштування</button>
+                    <button id="btn-about" class="menu-btn secondary-btn">Про гру</button>
+                </div>
+                
+                <footer class="menu-footer">
+                    <p>© 2026 Всі права захищено. Створено з любов'ю.</p>
+                </footer>
+            </div>
+        </section>
+
+        <!-- Screen 2: Character Selection -->
+        <section id="char-selection" class="menu-screen hidden">
+            <div class="menu-content glass-card wide-card">
+                <h2 class="screen-title">Оберіть свого персонажа</h2>
+                <p class="screen-desc">Кожен персонаж бачить цю пригоду під своїм кутом</p>
+                
+                <div class="character-grid">
+                    <!-- Character 1: Max -->
+                    <div id="char-max" class="char-card" data-char="max">
+                        <div class="char-avatar-placeholder max-avatar">👦</div>
+                        <div class="char-info">
+                            <h3>Макс</h3>
+                            <p class="char-role">Романтик та шукач пригод</p>
+                            <p class="char-bio">Привів Соломію в тунелі, щоб зробити цей день незабутнім. Має із собою ліхтарик та велике серце.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Character 2: Solomiya -->
+                    <div id="char-julia" class="char-card" data-char="julia">
+                        <div class="char-avatar-placeholder julia-avatar">👧</div>
+                        <div class="char-info">
+                            <h3>Соломія</h3>
+                            <p class="char-role">Скептик та аналітик</p>
+                            <p class="char-bio">Не дуже вірить у міські легенди, але обожнює історію. Має із собою блокнот та старовинну монету на удачу.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selection-actions">
+                    <button id="btn-char-back" class="menu-btn secondary-btn">Назад</button>
+                    <button id="btn-char-confirm" class="menu-btn primary-btn disabled" disabled>Підтвердити</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screen 3: Game Screen (Interactive VN UI) -->
+        <section id="story-viewport" class="story-viewport-screen hidden">
+            
+            <!-- Character Portrait Left (Max/Solomiya/Bieluch) -->
+            <div id="portrait-left" class="char-portrait hidden"></div>
+            
+            <!-- Character Portrait Right -->
+            <div id="portrait-right" class="char-portrait hidden"></div>
+
+            <!-- Dialogue and Control Box -->
+            <div id="ui-box-container" class="ui-box-container">
+                <!-- Speaker Name Badge -->
+                <div id="speaker-badge" class="speaker-badge hidden">Ім'я</div>
+                
+                <!-- Main Text Box -->
+                <div id="dialogue-box" class="dialogue-box glass-card">
+                    <div id="dialogue-text" class="dialogue-text">
+                        Крейдяні тунелі зустрічають вас холодною тишею... Натисніть, щоб розпочати подорож.
+                    </div>
+                    <span id="click-prompt" class="click-prompt">▼</span>
+                </div>
+                
+                <!-- Interaction Choices Box -->
+                <div id="choices-container" class="choices-container hidden">
+                    <!-- Dynamic choice buttons will be generated here -->
+                </div>
+            </div>
+
+            <!-- Inventory Display Overlay -->
+            <div id="inventory-bar" class="inventory-bar glass-card">
+                <span class="inventory-title">Рюкзак:</span>
+                <div id="inventory-items" class="inventory-items">
+                    <span class="empty-inventory">Порожньо</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overlay: Settings Modal -->
+        <section id="settings-modal" class="modal hidden">
+            <div class="modal-content glass-card">
+                <button id="btn-close-settings" class="close-modal-btn">×</button>
+                <h3 class="modal-title">Налаштування</h3>
+                
+                <div class="settings-group">
+                    <label for="slider-text-speed">Швидкість тексту</label>
+                    <input type="range" id="slider-text-speed" min="10" max="80" value="40" step="5">
+                    <span class="range-value" id="val-text-speed">Нормальна</span>
+                </div>
+                
+                <div class="settings-group">
+                    <label for="slider-ambient-volume">Гучність атмосфери</label>
+                    <input type="range" id="slider-ambient-volume" min="0" max="100" value="20">
+                    <span class="range-value" id="val-ambient-volume">20%</span>
+                </div>
+
+                <div class="settings-actions">
+                    <button id="btn-clear-save" class="danger-btn">Скинути всі збереження</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overlay: Save/Load Slots Modal -->
+        <section id="saveload-modal" class="modal hidden">
+            <div class="modal-content glass-card">
+                <button id="btn-close-saveload" class="close-modal-btn">×</button>
+                <h3 id="saveload-title" class="modal-title">Зберегти / Завантажити</h3>
+                
+                <div class="save-slots-list">
+                    <!-- Slot 1 -->
+                    <div class="save-slot" data-slot="1">
+                        <span class="slot-num">Слот 1</span>
+                        <div class="slot-info">
+                            <span class="slot-status">Порожньо</span>
+                        </div>
+                        <div class="slot-actions">
+                            <button class="slot-btn action-save">Зберегти</button>
+                            <button class="slot-btn action-load" disabled>Завантажити</button>
+                        </div>
+                    </div>
+                    <!-- Slot 2 -->
+                    <div class="save-slot" data-slot="2">
+                        <span class="slot-num">Слот 2</span>
+                        <div class="slot-info">
+                            <span class="slot-status">Порожньо</span>
+                        </div>
+                        <div class="slot-actions">
+                            <button class="slot-btn action-save">Зберегти</button>
+                            <button class="slot-btn action-load" disabled>Завантажити</button>
+                        </div>
+                    </div>
+                    <!-- Slot 3 -->
+                    <div class="save-slot" data-slot="3">
+                        <span class="slot-num">Слот 3</span>
+                        <div class="slot-info">
+                            <span class="slot-status">Порожньо</span>
+                        </div>
+                        <div class="slot-actions">
+                            <button class="slot-btn action-save">Зберегти</button>
+                            <button class="slot-btn action-load" disabled>Завантажити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overlay: About Game Modal -->
+        <section id="about-modal" class="modal hidden">
+            <div class="modal-content glass-card">
+                <button id="btn-close-about" class="close-modal-btn">×</button>
+                <h3 class="modal-title">Про проект</h3>
+                <div class="about-text-content">
+                    <p><strong>«Легенди Серця: Крейдяні Підземелля»</strong> — це інтерактивний романтичний квест, події якого розгортаються у Chełmskie Podziemia Kredowe (Хелмські крейдяні підземелля, Польща).</p>
+                    <p>За легендою, у цих тунелях мешкає привид Білух (Bieluch) — добрий дух білого ведмедя, що охороняє підземні лабіринти та чистоту сердець тих, хто сюди заходить.</p>
+                    <p>Ваші вибори вирішать долю закоханої пари, Макса та Соломії. Чи зможуть вони здолати темряву, розгадати таємниці привида та вийти до світла разом?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overlay: Gallery Modal -->
+        <section id="gallery-modal" class="modal hidden">
+            <div class="modal-content glass-card wide-card">
+                <button id="btn-close-gallery" class="close-modal-btn">×</button>
+                <h3 class="modal-title">Галерея Фіналів</h3>
+                
+                <div class="gallery-grid">
+                    <!-- Ending 1: True Love -->
+                    <div id="gallery-ending-true_love" class="gallery-card locked">
+                        <div class="gallery-img-container">
+                            <img src="assets/couple_kiss.png" alt="Вічне Кохання" class="gallery-preview">
+                            <div class="lock-overlay">🔒</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Вічне Кохання</h4>
+                            <p class="gallery-cond">Пройдіть випробування Білуха з високою довірою</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Ending 2: Normal -->
+                    <div id="gallery-ending-normal" class="gallery-card locked">
+                        <div class="gallery-img-container">
+                            <img src="assets/couple_kiss.png" alt="Вихід до Світла" class="gallery-preview">
+                            <div class="lock-overlay">🔒</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Вихід до Світла</h4>
+                            <p class="gallery-cond">Успішно вийдіть разом із підземелля</p>
+                        </div>
+                    </div>
+
+                    <!-- Ending 3: Friendship -->
+                    <div id="gallery-ending-friendship" class="gallery-card locked">
+                        <div class="gallery-img-container">
+                            <img src="assets/tunnels_entrance.png" alt="Холодні Тіні" class="gallery-preview">
+                            <div class="lock-overlay">🔒</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Холодні Тіні</h4>
+                            <p class="gallery-cond">Виберіться з тунелів із низьким рівнем довіри</p>
+                        </div>
+                    </div>
+
+                    <!-- Ending 4: Lost -->
+                    <div id="gallery-ending-lost" class="gallery-card locked">
+                        <div class="gallery-img-container">
+                            <img src="assets/ghost_bieluch.png" alt="Втрачені в Лабіринті" class="gallery-preview">
+                            <div class="lock-overlay">🔒</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Втрачені в Лабіринті</h4>
+                            <p class="gallery-cond">Заблукайте назавжди в темряві тунелів</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
