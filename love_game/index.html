@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveQuest Studio | Створення персональних ігор-подарунків</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Marck+Script&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="bg-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+    
+    <!-- Floating Hearts/Particles Background -->
+    <div id="particles-container" class="particles-container"></div>
+
+    <!-- LANDING PAGE WRAPPER -->
+    <div id="landing-wrapper" class="landing-wrapper">
+        
+        <!-- HEADER / NAVIGATION -->
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <span class="logo-heart">❤️</span>
+                    <span class="logo-text">LoveQuest<span class="logo-sub">Studio</span></span>
+                </a>
+                
+                <nav class="nav-menu">
+                    <a href="#about" class="nav-link">Чому гра?</a>
+                    <a href="#how-it-works" class="nav-link">Як це працює</a>
+                    <a href="#scenarios" class="nav-link">Сюжети</a>
+                    <a href="#pricing" class="nav-link">Ціни</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button class="nav-btn-demo secondary-btn" onclick="launchDemo()">Зіграти Демо</button>
+                    <a href="https://t.me/appa_web" target="_blank" class="nav-btn-order primary-btn">Замовити</a>
+                </div>
+
+                <button class="mobile-nav-toggle" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-up">🎁 Найкращий подарунок-враження 2026</div>
+                <h1 class="hero-title animate-fade-up-delayed">
+                    Подаруй йому гру, де він — <span class="gradient-text">головний герой</span>
+                </h1>
+                <p class="hero-description animate-fade-up-delayed-2">
+                    Створюємо унікальні персональні квест-ігри про вашу історію кохання. Перша зустріч, спільні подорожі, знакові місця та локальні жарти — все це в інтерактивному форматі на екрані його смартфону.
+                </p>
+                <div class="hero-ctas animate-fade-up-delayed-3">
+                    <a href="https://t.me/appa_web" target="_blank" class="primary-btn pulse-glow">
+                        <span class="btn-icon">💬</span> Обговорити сценарій в Telegram
+                    </a>
+                    <button onclick="launchDemo()" class="secondary-btn glow-border">
+                        <span class="btn-icon">🎮</span> Спробувати міні-гру (Демо)
+                    </button>
+                </div>
+                <div class="hero-trust animate-fade-up-delayed-4">
+                    <div class="trust-avatars">
+                        <span class="avatar">👨‍💻</span>
+                        <span class="avatar">👩‍❤️‍👨</span>
+                        <span class="avatar">💖</span>
+                    </div>
+                    <span class="trust-text">Понад 150+ дівчат вже здивували своїх коханих оригінальним квестом</span>
+                </div>
+            </div>
+            
+            <!-- Hero Mockup/Visual -->
+            <div class="hero-visual animate-fade-in-right">
+                <div class="phone-mockup-wrapper">
+                    <div class="phone-mockup">
+                        <div class="phone-screen-glow"></div>
+                        <div class="phone-camera"></div>
+                        <div class="phone-screen-content">
+                            <!-- Visual representation of the game in a phone mockup -->
+                            <div class="mockup-header">Нотатки Анни</div>
+                            <div class="mockup-chat">
+                                <div class="mockup-msg msg-left">Ти пам'ятаєш нашу першу зустріч біля тієї затишної кав'ярні? ☕</div>
+                                <div class="mockup-msg msg-right handwriting">Звичайно! На тобі був той дивний жовтий шарф... 🍁</div>
+                            </div>
+                            <div class="mockup-options">
+                                <div class="mockup-opt">«Усміхнутися і обійняти»</div>
+                                <div class="mockup-opt active-opt">«Жартома штовхнути плечем»</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCEPT / WHY SECTION -->
+        <section id="about" class="concept-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Чому це подарунок, який він <span class="gradient-text">ніколи не забуде</span>?</h2>
+                <p class="section-subtitle">Замість звичайних речей подаруйте емоції, які можна пережити знову і знову</p>
+            </div>
+
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">100% Індивідуально</h3>
+                    <p class="card-desc">Жодних шаблонів. Сюжет базується виключно на ваших спогадах, внутрішніх жартах, улюблених місцях та фотографіях.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">Ефект Занурення</h3>
+                    <p class="card-desc">Це не просто текст — це інтерактивний квест, де він робить вибори, розгадує головоломки та керує ходом сюжету.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="card-icon">🎹</div>
+                    <h3 class="card-title">Атмосферний Супровід</h3>
+                    <p class="card-desc">Ми додаємо фонову музику, звукові ефекти та інтерактивні елементи, які створюють кінематографічну атмосферу.</p>
+                </div>
+                <div class="concept-card">
+                    <div class="card-icon">📱</div>
+                    <h3 class="card-title">Назавжди у смартфоні</h3>
+                    <p class="card-desc">Гра працює через звичайний браузер на будь-якому телефоні чи ПК. Посилання залишається активним назавжди.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS TIMELINE -->
+        <section id="how-it-works" class="timeline-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Як створюється <span class="gradient-text">ваша спільна гра</span>?</h2>
+                <p class="section-subtitle">Простий та захоплюючий процес розробки — від ідеї до готового посилання</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content-box">
+                        <h3 class="timeline-title">Анкета та Спогади</h3>
+                        <p class="timeline-desc">Ви розповідаєте нам про вашу пару: як ви познайомилися, якісь кумедні пригоди, фразочки, які розумієте тільки ви двоє.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content-box">
+                        <h3 class="timeline-title">Розробка Сценарію</h3>
+                        <p class="timeline-desc">Наш професійний сценарист створює художній сюжет майбутнього квесту. Ми узгоджуємо з вами кожну деталь.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content-box">
+                        <h3 class="timeline-title">Візуальний дизайн та код</h3>
+                        <p class="timeline-desc">Стилізуємо ваші фото під стилістику гри, створюємо інтерфейс, програмуємо логіку виборів та загадок, додаємо музику.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content-box">
+                        <h3 class="timeline-title">Момент Вау! (Вручення)</h3>
+                        <p class="timeline-desc">Ви отримуєте посилання на готову гру та унікальний QR-код. Роздрукуйте його на красивій листівці та подаруйте йому!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORY IDEAS / SCENARIOS -->
+        <section id="scenarios" class="scenarios-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Популярні <span class="gradient-text">формати сюжетів</span></h2>
+                <p class="section-subtitle">Виберіть концепцію, яка найкраще підходить для вашої історії</p>
+            </div>
+
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-bg scenario-bg-romantic"></div>
+                    <div class="scenario-overlay"></div>
+                    <div class="scenario-content">
+                        <span class="scenario-tag">Романтика</span>
+                        <h3 class="scenario-title">«Шлях до нашого Сьогодення»</h3>
+                        <p class="scenario-desc">Хронологічна історія ваших стосунків. Від несміливого "Привіт" у першій переписці до подорожей та важливих спільних рішень.</p>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-bg scenario-bg-adventure"></div>
+                    <div class="scenario-overlay"></div>
+                    <div class="scenario-content">
+                        <span class="scenario-tag">Пригода & Гумор</span>
+                        <h3 class="scenario-title">«Таємниця загубленого квитка»</h3>
+                        <p class="scenario-desc">Комедійний квест, заснований на вашій найсмішнішій або найекстремальнішій поїздці чи пригоді, де він має врятувати ситуацію.</p>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-bg scenario-bg-detective"></div>
+                    <div class="scenario-overlay"></div>
+                    <div class="scenario-content">
+                        <span class="scenario-tag">Детектив & Пошук</span>
+                        <h3 class="scenario-title">«Сховище секретного подарунка»</h3>
+                        <p class="scenario-desc">Гра-шифр, де у фіналі розгадування складних романтичних загадок він знаходить карту або код, який вказує на реальний схований подарунок.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEMO BANNER SECTION -->
+        <section class="demo-teaser-section scroll-reveal">
+            <div class="demo-teaser-card">
+                <div class="teaser-glow"></div>
+                <div class="teaser-content">
+                    <h2 class="teaser-title">Бажаєте протестувати продукт прямо зараз?</h2>
+                    <p class="teaser-text">
+                        Ми підготували для вас демонстраційну міні-гру «Луна крізь час». Пройдіть її, щоб відчути атмосферу інтерактивного щоденника, виборів та головоломок.
+                    </p>
+                    <button onclick="launchDemo()" class="primary-btn pulse-glow">
+                        <span class="btn-icon">🎮</span> Запустити інтерактивне Демо
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="pricing-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Оберіть <span class="gradient-text">пакет розробки</span></h2>
+                <p class="section-subtitle">Прозорі ціни під будь-який запит та складність сюжету</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="price-card">
+                    <h3 class="price-name">Міні-Квест</h3>
+                    <div class="price-value">1 900 ₴</div>
+                    <p class="price-desc">Швидкий романтичний квест для яскравої емоції.</p>
+                    <div class="price-divider"></div>
+                    <ul class="price-features">
+                        <li><span>✓</span> 1 ігрова локація</li>
+                        <li><span>✓</span> Сюжет до 10 діалогових кроків</li>
+                        <li><span>✓</span> 1 інтерактивна загадка/код</li>
+                        <li><span>✓</span> Ваші 2-3 фото в інтерфейсі</li>
+                        <li><span>✓</span> Адаптація під смартфони</li>
+                        <li><span>✓</span> Термін створення: 3-5 днів</li>
+                    </ul>
+                    <a href="https://t.me/appa_web?text=Привіт!%20Хочу%20замовити%20пакет%20Міні-Квест" target="_blank" class="price-btn secondary-btn">Обрати Міні-Квест</a>
+                </div>
+
+                <!-- Plan 2 (Popular) -->
+                <div class="price-card popular-card">
+                    <div class="popular-badge">Найпопулярніший</div>
+                    <h3 class="price-name">Класична Історія</h3>
+                    <div class="price-value">3 500 ₴</div>
+                    <p class="price-desc">Повноцінна інтерактивна історія вашого кохання з музикою.</p>
+                    <div class="price-divider"></div>
+                    <ul class="price-features">
+                        <li><span>✓</span> 3-4 унікальні локації</li>
+                        <li><span>✓</span> Розгалужений сюжет (вибори впливають на фінал)</li>
+                        <li><span>✓</span> 2-3 романтичні головоломки</li>
+                        <li><span>✓</span> До 8-10 ваших фото та спогадів</li>
+                        <li><span>✓</span> Фоновий музичний супровід</li>
+                        <li><span>✓</span> Термін створення: 5-7 днів</li>
+                    </ul>
+                    <a href="https://t.me/appa_web?text=Привіт!%20Хочу%20замовити%20пакет%20Класична%20Історія" target="_blank" class="price-btn primary-btn pulse-glow">Обрати Класичну Історію</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="price-card">
+                    <h3 class="price-name">Індивідуальний VIP</h3>
+                    <div class="price-value">6 000 ₴+</div>
+                    <p class="price-desc">Ексклюзивний візуальний роман з унікальним артом.</p>
+                    <div class="price-divider"></div>
+                    <ul class="price-features">
+                        <li><span>✓</span> Необмежена кількість локацій</li>
+                        <li><span>✓</span> Повністю кастомні ілюстрації та арт</li>
+                        <li><span>✓</span> Складні міні-ігри та квести</li>
+                        <li><span>✓</span> Інтеграція відео та аудіо-повідомлень</li>
+                        <li><span>✓</span> Секретний код, що вказує на реальний подарунок</li>
+                        <li><span>✓</span> Пріоритетна підтримка та хостинг назавжди</li>
+                    </ul>
+                    <a href="https://t.me/appa_web?text=Привіт!%20Хочу%20замовити%20пакет%20VIP" target="_blank" class="price-btn secondary-btn">Зв'язатись для VIP</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Які емоції <span class="gradient-text">викликає гра</span>?</h2>
+                <p class="section-subtitle">Відгуки дівчат та враження хлопців, які пройшли свої персональні квести</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <span class="review-author">Марина (подарувала хлопцю на 3 роки стосунків)</span>
+                    </div>
+                    <p class="review-text">
+                        "Я хотіла подарувати щось особливе, а не чергові парфуми. Замовила «Класичну історію». Мій хлопець спочатку не зрозумів, а потім сидів дві години, згадував наше перше побачення, сміявся з наших локальних жартів. Він сказав, що це найкрутіший подарунок у його житті!"
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <span class="review-author">Олександр (отримав гру від дівчини на День народження)</span>
+                    </div>
+                    <p class="review-text">
+                        "Дівчина подарувала мені гру на ДН. Це було неймовірно! Сюжет крутився навколо нашої шаленої поїздки в Карпати. У кінці гри відкрився шифр, який підказав схованку з подарунком у квартирі. Інтерактив, спогади — це 10 з 10. Я оцінив зусилля!"
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <span class="review-author">Ольга (замовила VIP-квест)</span>
+                    </div>
+                    <p class="review-text">
+                        "Це вартує кожної копійки! Професійна робота розробників. Додали наші фото, музику, яку ми разом слухаємо в авто. Хлопець показував усім друзям, вони були в шоці, що про нього створили справжню комп'ютерну гру. Рекомендую!"
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="faq-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Часті <span class="gradient-text">запитання</span></h2>
+                <p class="section-subtitle">Тут ми зібрали відповіді на популярні запитання наших клієнтів</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Як мій хлопець відкриє гру? Йому потрібно щось завантажувати?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Нічого завантажувати не потрібно! Гра розробляється як веб-додаток. Ми надаємо вам індивідуальне посилання (і красивий QR-код), при переході за яким гра запускається миттєво в будь-якому браузері на телефоні, планшеті чи комп'ютері.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Які дані мені потрібно надати для створення квесту?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ми надсилаємо вам коротку та зручну анкету. Там будуть питання про вашу першу зустріч, знакові місця (наприклад, кафе, де відбулося перше побачення), ваші жарти, захоплення вашого хлопця, спільну музику та фотографії, які ви хотіли б інтегрувати.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Скільки часу займає розробка гри?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Створення квесту зазвичай займає від 3 до 7 днів в залежності від обраного пакету послуг. Якщо вам потрібен терміновий подарунок "на вчора", зв'яжіться з нами в Telegram — ми спробуємо допомогти в експрес-режимі.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи конфіденційні мої фото та особисті історії?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Абсолютно! Ми гарантуємо повну конфіденційність ваших особистих даних, листування та фотографій. Вони використовуються виключно для розробки вашої гри і не будуть опубліковані або передані третім особам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTACTS -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-heart">❤️</span>
+                        <span class="logo-text">LoveQuest<span class="logo-sub">Studio</span></span>
+                    </a>
+                    <p class="footer-tagline">Створюємо інтерактивні емоції, які залишаються в пам'яті назавжди.</p>
+                </div>
+                
+                <div class="footer-contacts">
+                    <h4>Контакти для замовлення:</h4>
+                    <a href="https://t.me/appa_web" target="_blank" class="footer-tg-link">
+                        <span class="tg-icon">✈️</span> Telegram: @appa_web
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LoveQuest Studio. Всі права захищено. Створено з любов'ю ❤️</p>
+            </div>
+        </footer>
+
+    </div>
+    <!-- END OF LANDING PAGE WRAPPER -->
+
+
+    <!-- PLAYABLE DEMO GAME CONTAINER (Initially Hidden) -->
+    <div id="demo-game-container" class="demo-game-container hidden">
+        
+        <!-- Demo Control Panel Overlay -->
+        <div class="demo-control-bar">
+            <button id="exit-demo-btn" class="exit-demo-btn" onclick="exitDemo()">
+                <span class="exit-icon">🚪</span> Вийти з демо
+            </button>
+            
+            <!-- Sound Toggle Widget (Moved inside container) -->
+            <div id="sound-control" class="sound-control">
+                <button id="sound-btn" class="sound-btn" aria-label="Увімкнути/Вимкнути звук">
+                    <span class="sound-icon">🔈</span>
+                    <span class="sound-text">Звук: Вимкнено</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Title Screen -->
+        <section id="title-screen" class="title-screen">
+            <div class="title-overlay"></div>
+            <div class="title-content">
+                <h1 class="game-logo">Луна крізь час</h1>
+                <p class="game-subtitle">Echoes Through Time</p>
+                <div class="divider-glow"></div>
+                <p class="game-intro-text">
+                    Дві епохи. Два серця, розділені 138 роками невідомості. <br>
+                    Один магічний щоденник, що здатний змінити хід історії.
+                </p>
+                <button id="start-game-btn" class="premium-btn">Почати реставрацію</button>
+            </div>
+        </section>
+
+        <!-- Main Game Play Screen -->
+        <main id="game-screen" class="game-screen hidden">
+            <!-- Trust Meter -->
+            <div class="trust-container">
+                <span class="heart-icon">❤️</span>
+                <span class="trust-label">Довіра:</span>
+                <div class="trust-bar-bg">
+                    <div id="trust-bar-fill" class="trust-bar-fill" style="width: 0%;"></div>
+                </div>
+                <span id="trust-value" class="trust-value">0%</span>
+            </div>
+
+            <!-- Split Era Backgrounds -->
+            <div class="era-split">
+                <!-- Left Era: Anna (Present, 2026) -->
+                <div id="era-anna" class="era-panel era-present">
+                    <div class="era-overlay"></div>
+                    <div class="flashlight-glow" id="flashlight"></div>
+                    <div class="era-badge">Анна • Теперішнє (2026)</div>
+                    <div class="location-desc">Стара занедбана вежа маєтку</div>
+                </div>
+
+                <!-- Right Era: Max (Past, 1888) -->
+                <div id="era-max" class="era-panel era-past">
+                    <div class="era-overlay"></div>
+                    <div class="candle-flicker"></div>
+                    <div class="era-badge">Макс • Минуле (1888)</div>
+                    <div class="location-desc">Кабінет алхіміка</div>
+                </div>
+            </div>
+
+            <!-- The Alchemical Diary Interface (Book Overlay) -->
+            <div class="diary-container">
+                <div class="diary-book">
+                    <div class="diary-spine"></div>
+                    
+                    <!-- Left Page (Anna / Actions) -->
+                    <div class="diary-page page-left">
+                        <div class="page-content">
+                            <div class="page-header">Нотатки Анни</div>
+                            <div id="anna-log" class="page-body">
+                                <!-- Anna's thoughts/dialogue appears here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Page (Max / Messages) -->
+                    <div class="diary-page page-right">
+                        <div class="page-content">
+                            <div class="page-header">Свіжі чорнила</div>
+                            <div id="max-log" class="page-body handwriting">
+                                <!-- Max's handwritten text appears here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interaction Box below the book -->
+                <div class="interaction-area">
+                    <div id="narrative-text" class="narrative-text"></div>
+                    <div id="options-container" class="options-container">
+                        <!-- Dialogue choices appear here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Puzzle Overlay Modal -->
+        <div id="puzzle-modal" class="puzzle-modal hidden">
+            <div class="puzzle-backdrop"></div>
+            <div class="puzzle-content">
+                <h2 class="puzzle-title">Таємниця Портрета</h2>
+                <p class="puzzle-desc">
+                    На рамі старого заіржавілого портрета засновника розташовано кодовий замок із небесними символами.
+                    У теперішньому часі механізм заклинив на символі Зірки.
+                </p>
+                <div class="riddle-box">
+                    <p class="riddle-quote">«Шлях починається там, де падає світло ночі, і закінчується світанком»</p>
+                    <p class="riddle-hint">Підказка: Перетягуйте або клацайте елементи, щоб розташувати світила в хронологічному порядку від ночі до ранку.</p>
+                </div>
+
+                <!-- Puzzle Interactive Area -->
+                <div class="symbols-wrapper">
+                    <div class="symbols-container" id="symbols-container">
+                        <!-- Symbols to be generated & sorted -->
+                        <div class="symbol-node" data-id="star" draggable="true">
+                            <span class="symbol-art">⭐</span>
+                            <span class="symbol-name">Зірка</span>
+                        </div>
+                        <div class="symbol-node" data-id="moon" draggable="true">
+                            <span class="symbol-art">🌙</span>
+                            <span class="symbol-name">Місяць</span>
+                        </div>
+                        <div class="symbol-node" data-id="sun" draggable="true">
+                            <span class="symbol-art">☀️</span>
+                            <span class="symbol-name">Сонце</span>
+                        </div>
+                        <div class="symbol-node" data-id="comet" draggable="true">
+                            <span class="symbol-art">☄️</span>
+                            <span class="symbol-name">Комета</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="puzzle-feedback" class="puzzle-feedback"></p>
+                <button id="submit-puzzle" class="premium-btn">Перевірити механізм</button>
+            </div>
+        </div>
+
+        <!-- Portal ending overlay -->
+        <div id="portal-screen" class="portal-screen hidden">
+            <canvas id="portal-canvas" class="portal-canvas"></canvas>
+            <div class="portal-content">
+                <h1 class="portal-header">Алхімічне дзеркало</h1>
+                <p class="portal-text">
+                    Стародавнє срібне дзеркало у підвалі вежі завібрувало, випускаючи промені дивного блакитного та золотого світла.
+                    Вихор часу готовий перенести вас, але повернутися назад буде неможливо.
+                </p>
+                <div class="portal-choices">
+                    <button id="choice-stay" class="portal-btn present-btn">Залишитися в 2026 році</button>
+                    <button id="choice-go" class="portal-btn past-btn">Крокнути в минуле (1888)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Ending / Credits Screen -->
+        <section id="ending-screen" class="ending-screen hidden">
+            <div class="ending-overlay"></div>
+            <div class="ending-content">
+                <h1 id="ending-title" class="ending-title">Фінал</h1>
+                <p id="ending-desc" class="ending-desc"></p>
+                <div class="divider-glow"></div>
+                <p class="credits">Дякуємо за гру! <br> Сюжет розіграно у «Луна крізь час».</p>
+                <button id="restart-game-btn" class="premium-btn">Грати знову</button>
+            </div>
+        </section>
+
+    </div>
+    <!-- END OF PLAYABLE DEMO GAME CONTAINER -->
+
+    <script src="script.js"></script>
+</body>
+</html>
